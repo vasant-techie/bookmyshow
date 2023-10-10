@@ -1,2 +1,4 @@
-INSERT IGNORE INTO `bms`.`authorities` VALUES (NULL, 'john', 'write');
-INSERT IGNORE INTO `bms`.`users` VALUES (NULL, 'kalam', '12345', '1',  'Abdul', 'Kalam', 'abdul.kalam@gmail.com', '9999999999', 'Rameshwaram', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.authorities (username, authority) VALUES ('john', 'write');
+INSERT INTO bms.users
+(username, password, enabled, firstname, lastname, email, mobile, address, created, modified)
+VALUES ('kalam', '12345', 1,  'Abdul', 'Kalam', 'abdul.kalam@gmail.com', '9999999999', 'Rameshwaram', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

@@ -1,1 +1,4 @@
 rootProject.name = 'bookmyshow'
+include 'bms-gateway'
+include 'bms-consumer-api'
+

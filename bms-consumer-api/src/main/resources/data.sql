@@ -1,0 +1,2 @@
+INSERT IGNORE INTO `bms`.`authorities` VALUES (NULL, 'john', 'write');
+INSERT IGNORE INTO `bms`.`users` VALUES (NULL, 'kalam', '12345', '1',  'Abdul', 'Kalam', 'abdul.kalam@gmail.com', '9999999999', 'Rameshwaram', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

@@ -43,3 +43,45 @@ VALUES ('Vetri Cinemas', 'Villapuram', 'Madurai', 'Tamil Nadu', 625012, CURRENT_
 INSERT INTO bms.theatres
 (theatrename, address, city, state, pincode, created, modified)
 VALUES ('Guru Theatre', 'Arappalayam, Gnanavolivupuram', 'Madurai', 'Tamil Nadu', 625016, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- MOVIES
+INSERT INTO bms.movies
+(moviename, description, releasedate, genre, duration, created, modified)
+VALUES ('The Avengers', 'The Avengers are a group of superheroes who have gained worldwide attention and are known for their incredible abilities.', '2012-04-25', 'Action', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO bms.movies
+(moviename, description, releasedate, genre, duration, created, modified)
+VALUES ('The Dark Knight', 'The Dark Knight is a superhero film directed by Christopher Nolan.', '2008-07-18', 'Action', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO bms.movies
+(moviename, description, releasedate, genre, duration, created, modified)
+VALUES ('The Godfather', 'The Godfather is a crime film directed by Francis Ford Coppola.', '1972-03-14', 'Crime', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO BMS.MOVIES
+(moviename, description, releasedate, genre, duration, created, modified)
+VALUES ('The Godfather: Part II', 'The Godfather: Part II is a crime film directed by Francis Ford Coppola.', '1974-12-20', 'Crime', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- SHOWS
+INSERT INTO bms.shows
+(theatreid, movieid, enabled, ticketcost, created, modified)
+VALUES (1, 1, 1, 180, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO bms.shows
+(theatreid, movieid, enabled, ticketcost, created, modified)
+VALUES (1, 2, 1, 200, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO bms.shows
+(theatreid, movieid, enabled, ticketcost, created, modified)
+VALUES (1, 3, 1, 190, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO bms.shows
+(theatreid, movieid, enabled, ticketcost, created, modified)
+VALUES (1, 4, 1, 180, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO BMS.SHOWS
+(theatreid, movieid, enabled, ticketcost, created, modified)
+VALUES (2, 1, 1, 190, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO BMS.SHOWS
+(theatreid, movieid, enabled, ticketcost, created, modified)
+VALUES (2, 2, 1, 200, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

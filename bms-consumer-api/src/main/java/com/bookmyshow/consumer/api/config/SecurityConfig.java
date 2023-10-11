@@ -38,14 +38,4 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public SecurityWebFilterChain configureWeb(ServerHttpSecurity http) throws Exception {
-        http.redirectToHttps(Customizer.withDefaults());
-        return http.build();
-    }
-
-    @Bean
-    public ServerHttpSecurity serverHttpSecurity() {
-        return ServerHttpSecurity.http();
-    }
 }

@@ -46,20 +46,20 @@ VALUES ('Guru Theatre', 'Arappalayam, Gnanavolivupuram', 'Madurai', 'Tamil Nadu'
 
 -- MOVIES
 INSERT INTO bms.movies
-(moviename, description, releasedate, genre, duration, created, modified)
-VALUES ('The Avengers', 'The Avengers are a group of superheroes who have gained worldwide attention and are known for their incredible abilities.', '2012-04-25', 'Action', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(moviename, description,  language, director, castings, releasedate, genre, duration, created, modified)
+VALUES ('The Avengers', 'The Avengers are a group of superheroes who have gained worldwide attention and are known for their incredible abilities.', 'English', 'Francis Ford Coppola', 'Marlon Brando, Al Pacino, James Caan', '2012-04-25',  'Action', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO bms.movies
-(moviename, description, releasedate, genre, duration, created, modified)
-VALUES ('The Dark Knight', 'The Dark Knight is a superhero film directed by Christopher Nolan.', '2008-07-18', 'Action', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(moviename, description, language, director, castings, releasedate, genre, duration, created, modified)
+VALUES ('The Godfather', 'The Godfather is a crime film directed by Francis Ford Coppola.', 'English', 'Francis Ford Coppola', 'Marlon Brando, Al Pacino, James Caan', '1972-03-14', 'Crime', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO bms.movies
-(moviename, description, releasedate, genre, duration, created, modified)
-VALUES ('The Godfather', 'The Godfather is a crime film directed by Francis Ford Coppola.', '1972-03-14', 'Crime', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(moviename, description, language, director, castings, releasedate, genre, duration, created, modified)
+VALUES ('The Godfather: Part II', 'The Godfather: Part II is a crime film directed by Francis Ford Coppola.', 'English', 'Francis Ford Coppola', 'Marlon Brando, Al Pacino, James Caan', '1974-12-20', 'Crime', 180, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
-INSERT INTO BMS.MOVIES
-(moviename, description, releasedate, genre, duration, created, modified)
-VALUES ('The Godfather: Part II', 'The Godfather: Part II is a crime film directed by Francis Ford Coppola.', '1974-12-20', 'Crime', 120, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.movies
+(moviename, description, language, director, castings, releasedate, genre, duration, created, modified)
+VALUES ('The Dark Knight', 'The Dark Knight is a superhero film directed by Christopher Nolan.', 'English', 'Christopher Nolan', 'Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine', '2008-07-18', 'Action', 180, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- SHOWS
 INSERT INTO bms.shows

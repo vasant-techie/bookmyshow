@@ -1,4 +1,4 @@
-package com.bookmyshow.consumer.api.security;
+package com.bookmyshow.consumer.api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,20 +12,21 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 @Configuration
 @EnableWebSecurity
-public class BMSSecurityHandler {
+public class SecurityConfig {
 
     @Bean
     MvcRequestMatcher.Builder matcher(HandlerMappingIntrospector handlerMappingIntrospector) {
         return new MvcRequestMatcher.Builder(handlerMappingIntrospector);
     }
 
-
     @Bean
     public SecurityFilterChain configure(HttpSecurity http, MvcRequestMatcher.Builder mvcMatcher) throws Exception {
 
-        http.authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers(mvcMatcher.servletPath("/actuator").pattern("**")).permitAll() // just an example of an endpoint
-                        .requestMatchers(mvcMatcher.servletPath("/h2-console").pattern("**")).permitAll()
+        http
+                .requiresChannel(req -> req.anyRequest().requiresSecure())
+                .authorizeHttpRequests((authorize) -> authorize
+                        //.requestMatchers(mvcMatcher.servletPath("/actuator").pattern("**")).permitAll() // just an example of an endpoint
+                        //.requestMatchers(mvcMatcher.servletPath("/h2-console").pattern("**")).permitAll()
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)

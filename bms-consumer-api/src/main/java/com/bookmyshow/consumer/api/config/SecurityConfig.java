@@ -2,11 +2,14 @@ package com.bookmyshow.consumer.api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
@@ -24,15 +27,25 @@ public class SecurityConfig {
 
         http
                 .requiresChannel(req -> req.anyRequest().requiresSecure())
-                .authorizeHttpRequests((authorize) -> authorize
+                //.authorizeHttpRequests((authorize) -> authorize
                         //.requestMatchers(mvcMatcher.servletPath("/actuator").pattern("**")).permitAll() // just an example of an endpoint
                         //.requestMatchers(mvcMatcher.servletPath("/h2-console").pattern("**")).permitAll()
-                        .anyRequest().authenticated()
-                )
+                        //.anyRequest().authenticated()
+                //)
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(httpSecurityHeadersConfigurer -> httpSecurityHeadersConfigurer.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
 
         return http.build();
     }
 
+    @Bean
+    public SecurityWebFilterChain configureWeb(ServerHttpSecurity http) throws Exception {
+        http.redirectToHttps(Customizer.withDefaults());
+        return http.build();
+    }
+
+    @Bean
+    public ServerHttpSecurity serverHttpSecurity() {
+        return ServerHttpSecurity.http();
+    }
 }

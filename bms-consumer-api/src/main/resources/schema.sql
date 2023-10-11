@@ -33,6 +33,8 @@ CREATE TABLE IF NOT EXISTS bms.theatres (
   city VARCHAR(45) NOT NULL,
   state VARCHAR(45) NOT NULL,
   pincode INT NOT NULL,
+  created DATE NOT NULL,
+  modified DATE NOT NULL,
   PRIMARY KEY (theatreid));
 
 CREATE TABLE IF NOT EXISTS bms.shows (

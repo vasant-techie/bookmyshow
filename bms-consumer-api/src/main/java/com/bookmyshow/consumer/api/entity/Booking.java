@@ -2,14 +2,17 @@ package com.bookmyshow.consumer.api.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "bookings", schema = "bms")
+@NoArgsConstructor
 public class Booking {
 
     @Id
@@ -29,10 +32,13 @@ public class Booking {
     private int seats;
 
     @Column(name = "bookingdate", nullable = false)
-    private Date bookingDate;
+    private LocalDate bookingDate;
 
     @Column(name = "amount", nullable = false)
     private int amount;
 
-    // Constructors, getters, and setters
+
+    public Booking(Show show) {
+        this.show = show;
+    }
 }

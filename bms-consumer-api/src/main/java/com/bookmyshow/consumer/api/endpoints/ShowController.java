@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/v1/show")
 public class ShowController {
 
-    private ShowService showService;
+    private final ShowService showService;
 
     public ShowController(ShowService showService) {
         this.showService = showService;

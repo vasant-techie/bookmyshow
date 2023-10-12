@@ -25,4 +25,12 @@ public interface ShowRepository extends JpaRepository<Show, Long> {
                                                                               @Param("showTime") LocalTime showTime
     );
 
+    @Query("SELECT s FROM Show s " +
+            "JOIN s.movie m " +
+            "JOIN s.theatre t " +
+            "WHERE m.movieName = :movieName " +
+            "AND t.city = :city " +
+            "AND :showDate BETWEEN s.startDate AND s.endDate " +
+            "AND s.showTime = :showTime")
+    Show findShowByCityAndMovieNameAndShowDateAndTime(String city, String movieName, LocalDate parse, LocalTime parse1);
 }

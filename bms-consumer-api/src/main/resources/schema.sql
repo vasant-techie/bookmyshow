@@ -45,6 +45,15 @@ CREATE TABLE IF NOT EXISTS bms.theatres (
   modified TIMESTAMP NOT NULL,
   PRIMARY KEY (theatreid));
 
+CREATE TABLE IF NOT EXISTS bms.theatreseats (
+  seatid INT NOT NULL AUTO_INCREMENT,
+  theatreid INT NOT NULL REFERENCES bms.theatres(theatreid) ON DELETE CASCADE,
+  seatno VARCHAR(5) NOT NULL,
+  status INT NOT NULL,
+  created TIMESTAMP NOT NULL,
+  modified TIMESTAMP NOT NULL,
+  PRIMARY KEY (seatid));
+
 CREATE TABLE IF NOT EXISTS bms.shows (
   showid INT NOT NULL AUTO_INCREMENT,
   theatreid INT NOT NULL REFERENCES bms.theatres(theatreid) ON DELETE CASCADE,
@@ -66,5 +75,13 @@ CREATE TABLE IF NOT EXISTS bms.bookings (
   bookingdate TIMESTAMP NOT NULL,
   amount INT NOT NULL,
   PRIMARY KEY (bookingid));
+
+CREATE TABLE IF NOT EXISTS bms.seatbookings (
+  seatbookingid INT NOT NULL AUTO_INCREMENT,
+  showid INT NOT NULL REFERENCES bms.shows(showid) ON DELETE CASCADE,
+  seatid VARCHAR(5) NOT NULL REFERENCES bms.theatreseats(seatid) ON DELETE CASCADE,
+  PRIMARY KEY (seatbookingid));
+
+
 
 

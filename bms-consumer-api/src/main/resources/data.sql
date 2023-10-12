@@ -44,6 +44,198 @@ INSERT INTO bms.theatres
 (theatrename, address, city, state, pincode, created, modified)
 VALUES ('Guru Theatre', 'Arappalayam, Gnanavolivupuram', 'Madurai', 'Tamil Nadu', 625016, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+-- THEATRES SEATS
+-- A ROW
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '1A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '2A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '3A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '4A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '5A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '6A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '7A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '8A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '9A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '10A', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+-- B ROW
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '1B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '2B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '3B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '4B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '5B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '6B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '7B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '8B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '9B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '10B', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+-- C ROW
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '1C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '2C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '3C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '4C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '5C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '6C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '7C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '8C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '9C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '10C', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- D ROW
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '1D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '2D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '3D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '4D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '5D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '6D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '7D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '8D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '9D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '10D', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- E ROW
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '1E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '2E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '3E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '4E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '5E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '6E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '7E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '8E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '9E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '10E', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- F ROW
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '1F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '2F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '3F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '4F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '5F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '6F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '7F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '8F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '9F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO bms.theatreseats
+(theatreid, seatno, status, created, modified)
+VALUES (1, '10F', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+
 -- MOVIES
 INSERT INTO bms.movies
 (moviename, description,  language, director, casting, releasedate, genre, duration, created, modified)

@@ -32,5 +32,8 @@ public interface ShowRepository extends JpaRepository<Show, Long> {
             "AND t.city = :city " +
             "AND :showDate BETWEEN s.startDate AND s.endDate " +
             "AND s.showTime = :showTime")
-    Show findShowByCityAndMovieNameAndShowDateAndTime(String city, String movieName, LocalDate parse, LocalTime parse1);
+    Show findShowByCityAndMovieNameAndShowDateAndTime(@Param("city") String city,
+                                                      @Param("movieName") String movieName,
+                                                      @Param("showDate") LocalDate showDate,
+                                                      @Param("showTime") LocalTime showTime);
 }

@@ -1,7 +1,7 @@
 package com.bookmyshow.consumer.api.service;
 
+import com.bookmyshow.consumer.api.dto.BookingDetails;
 import com.bookmyshow.consumer.api.entity.Booking;
-import com.bookmyshow.consumer.api.entity.Show;
 import com.bookmyshow.consumer.api.repo.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,9 +17,14 @@ public class BookingService {
         this.bookingRepository = bookingRepository;
         this.showService = showService;
     }
-    public Booking bookSeats(String city, String movieName, String showDate, String showTime) {
+/*    public Booking bookSeats(String city, String movieName, String showDate, String showTime) {
         Show show = showService.findShowByCityAndMovieNameAndShowDateAndTime(city, movieName, showDate, showTime);
         Booking booking = new Booking(show);
         return bookingRepository.save(booking);
+    }*/
+
+    public Booking bookSeats(BookingDetails bookingDetails) {
+        return null;
     }
+
 }

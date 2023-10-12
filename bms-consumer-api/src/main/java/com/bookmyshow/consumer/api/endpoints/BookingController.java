@@ -1,9 +1,11 @@
 package com.bookmyshow.consumer.api.endpoints;
 
+import com.bookmyshow.consumer.api.dto.BookingDetails;
 import com.bookmyshow.consumer.api.entity.Booking;
 import com.bookmyshow.consumer.api.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,9 +21,9 @@ public class BookingController {
         this.bookingService = bookingService;
     }
 
-    @RequestMapping(path = "/book-seats/${city}/${moviename}/${showdate}/${showtime}", method = RequestMethod.POST)
-    public ResponseEntity<Booking> bookSeats(String city, String movieName, String showDate, String showTime) {
-        Booking booking = bookingService.bookSeats(city, movieName, showDate, showTime);
+    @RequestMapping(path = "/book-seats", method = RequestMethod.POST)
+    public ResponseEntity<Booking> bookSeats(@RequestBody BookingDetails bookingDetails) {
+        Booking booking = bookingService.bookSeats(bookingDetails);
         return ResponseEntity.created(null).body(booking);
     }
 }

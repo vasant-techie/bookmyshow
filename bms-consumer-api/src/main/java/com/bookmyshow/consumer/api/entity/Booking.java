@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -28,8 +28,9 @@ public class Booking {
     @JoinColumn(name = "userid")
     private Customer user;
 
-    @Column(name = "seats", nullable = false)
-    private int seats;
+    @Transient
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<TheatreSeat> seats;
 
     @Column(name = "bookingdate", nullable = false)
     private LocalDate bookingDate;
@@ -38,7 +39,13 @@ public class Booking {
     private int amount;
 
 
-    public Booking(Show show) {
+    public Booking(Show show, Customer user, List<TheatreSeat> theatreSeats) {
         this.show = show;
+        this.user = user;
+        this.bookingDate = LocalDate.now();
+        this.amount = show.getTicketCost() * theatreSeats.size();
+        this.seats = theatreSeats;
     }
+
+
 }

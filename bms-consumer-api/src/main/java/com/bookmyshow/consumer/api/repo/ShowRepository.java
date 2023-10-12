@@ -36,4 +36,6 @@ public interface ShowRepository extends JpaRepository<Show, Long> {
                                                       @Param("movieName") String movieName,
                                                       @Param("showDate") LocalDate showDate,
                                                       @Param("showTime") LocalTime showTime);
+
+    Show findShowByShowId(Long showId);
 }

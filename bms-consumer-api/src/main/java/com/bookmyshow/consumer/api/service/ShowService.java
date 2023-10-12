@@ -13,14 +13,18 @@ import java.util.List;
 @Service
 public class ShowService {
 
+    private final ShowRepository showRepository;
+
     @Autowired
-    private ShowRepository showRepository;
+    public ShowService(ShowRepository showRepository) {
+        this.showRepository = showRepository;
+    }
 
     public List<Theatre> findTheatresByMovieCityAndMovieDateAndMovieTimeAndMovieName(String city, String movieName, String showDate, String showTime) {
         return showRepository.findTheatresByMovieCityAndMovieNameAndMovieDateAndMovieTime(city, movieName, LocalDate.parse(showDate), LocalTime.parse(showTime));
     }
 
-    public Show findShowByCityAndMovieNameAndShowDateAndTime(String city, String movieName, String showDate, String showTime) {
-        return showRepository.findShowByCityAndMovieNameAndShowDateAndTime(city, movieName, LocalDate.parse(showDate), LocalTime.parse(showTime));
+    public Show findShowByShowId(Long showId) {
+        return showRepository.findShowByShowId(showId);
     }
 }

@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
+
+import static jakarta.persistence.CascadeType.ALL;
 
 @Getter
 @Setter
@@ -31,6 +34,9 @@ public class Theatre {
 
     @Column(name = "pincode", nullable = false)
     private int pincode;
+
+    @OneToMany(targetEntity = TheatreSeat.class, cascade = ALL, mappedBy = "theatre", fetch = FetchType.LAZY)
+    private List<TheatreSeat> theatreSeats;
 
     @Column(name = "created", nullable = false)
     private Date created;

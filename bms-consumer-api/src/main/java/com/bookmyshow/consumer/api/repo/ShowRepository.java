@@ -11,14 +11,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 public interface ShowRepository extends JpaRepository<Show, Long> {
-    List<Show> findAll();
 
-/*    @Query(value = "SELECT t.* FROM bms.shows s, bms.movies m, bms.theatres t " +
-            "WHERE m.movieid = s.movieid AND m.moviename = :movieName " +
-            "AND t.theatreid = s.theatreid AND t.city = :city " +
-            "AND :showDate BETWEEN s.startdate AND s.enddate " +
-            "AND s.showtime = :showTime"
-            , nativeQuery = true)*/
     @Query("SELECT t FROM Show s " +
             "JOIN s.movie m " +
             "JOIN s.theatre t " +
@@ -31,7 +24,5 @@ public interface ShowRepository extends JpaRepository<Show, Long> {
                                                                               @Param("showDate") LocalDate showDate,
                                                                               @Param("showTime") LocalTime showTime
     );
-
-    //List<Theatre> findTheatresByTheatreCityAndShowTimeAndMovieMovieNameAndStartDateBeforeAndEndDateAfter(String city, LocalTime showTime, String movieName, LocalDate showDate);
 
 }

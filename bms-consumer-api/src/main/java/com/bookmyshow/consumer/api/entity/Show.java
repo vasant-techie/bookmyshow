@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Getter
 @Setter
@@ -31,10 +33,19 @@ public class Show {
     @Column(name = "ticketcost", nullable = false)
     private int ticketCost;
 
+    @Column(name = "showtime", nullable = false)
+    private LocalTime showTime;
+
+    @Column(name = "startdate", nullable = false)
+    private LocalDate startDate;
+
+    @Column(name = "enddate", nullable = false)
+    private LocalDate endDate;
+
     @Column(name = "created", nullable = false)
-    private Date created;
+    private LocalDateTime created;
 
     @Column(name = "modified", nullable = false)
-    private Date modified;
+    private LocalDateTime modified;
 
 }

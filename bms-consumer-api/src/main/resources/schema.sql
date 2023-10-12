@@ -51,6 +51,9 @@ CREATE TABLE IF NOT EXISTS bms.shows (
   movieid INT NOT NULL REFERENCES  bms.movies(movieid) ON DELETE CASCADE,
   enabled INT NOT NULL,
   ticketcost INT NOT NULL,
+  showtime TIME NOT NULL,
+  startdate DATE NOT NULL,
+  enddate DATE NOT NULL,
   created TIMESTAMP NOT NULL,
   modified TIMESTAMP NOT NULL,
   PRIMARY KEY (showid));

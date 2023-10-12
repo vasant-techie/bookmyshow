@@ -63,25 +63,25 @@ VALUES ('The Dark Knight', 'The Dark Knight is a superhero film directed by Chri
 
 -- SHOWS
 INSERT INTO bms.shows
-(theatreid, movieid, enabled, ticketcost, created, modified)
-VALUES (1, 1, 1, 180, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(theatreid, movieid, enabled, ticketcost, showtime, startdate, enddate, created, modified)
+VALUES (1, 1, 1, 180, '10:00', CURRENT_DATE, CURRENT_DATE + 7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO bms.shows
-(theatreid, movieid, enabled, ticketcost, created, modified)
-VALUES (1, 2, 1, 200, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(theatreid, movieid, enabled, ticketcost, showtime, startdate, enddate, created, modified)
+VALUES (1, 2, 1, 200, '14:00', CURRENT_DATE, CURRENT_DATE + 7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO bms.shows
-(theatreid, movieid, enabled, ticketcost, created, modified)
-VALUES (1, 3, 1, 190, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(theatreid, movieid, enabled, ticketcost, showtime, startdate, enddate, created, modified)
+VALUES (1, 3, 1, 190, '17:00', CURRENT_DATE, CURRENT_DATE + 7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO bms.shows
-(theatreid, movieid, enabled, ticketcost, created, modified)
-VALUES (1, 4, 1, 180, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(theatreid, movieid, enabled, ticketcost, showtime, startdate, enddate, created, modified)
+VALUES (1, 4, 1, 180, '22:00', CURRENT_DATE, CURRENT_DATE + 7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO BMS.SHOWS
-(theatreid, movieid, enabled, ticketcost, created, modified)
-VALUES (2, 1, 1, 190, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(theatreid, movieid, enabled, ticketcost, showtime, startdate, enddate, created, modified)
+VALUES (2, 1, 1, 180, '10:00', CURRENT_DATE, CURRENT_DATE + 7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO BMS.SHOWS
-(theatreid, movieid, enabled, ticketcost, created, modified)
-VALUES (2, 2, 1, 200, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(theatreid, movieid, enabled, ticketcost, showtime, startdate, enddate, created, modified)
+VALUES (2, 2, 1, 200, '14:00', CURRENT_DATE, CURRENT_DATE + 7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

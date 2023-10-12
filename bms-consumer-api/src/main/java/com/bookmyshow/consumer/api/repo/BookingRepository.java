@@ -1,7 +1,7 @@
 package com.bookmyshow.consumer.api.repo;
 
-import com.bookmyshow.consumer.api.entity.Booking;
+import com.bookmyshow.consumer.api.entity.Bookings;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BookingRepository extends JpaRepository<Booking, Long> {
+public interface BookingRepository extends JpaRepository<Bookings, Long> {
 }

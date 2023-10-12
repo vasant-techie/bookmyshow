@@ -1,7 +1,7 @@
 package com.bookmyshow.consumer.api.endpoints;
 
 import com.bookmyshow.consumer.api.dto.BookingDetails;
-import com.bookmyshow.consumer.api.entity.Booking;
+import com.bookmyshow.consumer.api.entity.Bookings;
 import com.bookmyshow.consumer.api.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +22,8 @@ public class BookingController {
     }
 
     @RequestMapping(path = "/book-seats", method = RequestMethod.POST)
-    public ResponseEntity<Booking> bookSeats(@RequestBody BookingDetails bookingDetails) {
-        Booking booking = bookingService.bookSeats(bookingDetails);
-        return ResponseEntity.created(null).body(booking);
+    public ResponseEntity<Bookings> bookSeats(@RequestBody BookingDetails bookingDetails) {
+        Bookings bookings = bookingService.bookSeats(bookingDetails);
+        return ResponseEntity.status(201).body(bookings);
     }
 }

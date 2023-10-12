@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -13,7 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "bookings", schema = "bms")
 @NoArgsConstructor
-public class Booking {
+public class Bookings {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +30,8 @@ public class Booking {
     private Customer user;
 
     @Transient
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<TheatreSeat> seats;
+    @OneToMany(mappedBy = "bookings", cascade = CascadeType.ALL)
+    private List<SeatBookings> seatBookings;
 
     @Column(name = "bookingdate", nullable = false)
     private LocalDate bookingDate;
@@ -38,13 +39,20 @@ public class Booking {
     @Column(name = "amount", nullable = false)
     private int amount;
 
+    @Column(name = "created", nullable = false)
+    private LocalDateTime created;
 
-    public Booking(Show show, Customer user, List<TheatreSeat> theatreSeats) {
+    @Column(name = "modified", nullable = false)
+    private LocalDateTime modified;
+
+    public Bookings(Show show, Customer user, List<SeatBookings> seatBookings) {
         this.show = show;
         this.user = user;
         this.bookingDate = LocalDate.now();
-        this.amount = show.getTicketCost() * theatreSeats.size();
-        this.seats = theatreSeats;
+        this.amount = show.getTicketCost() * seatBookings.size();
+        this.seatBookings = seatBookings;
+        this.created = LocalDateTime.now();
+        this.modified = LocalDateTime.now();
     }
 
 

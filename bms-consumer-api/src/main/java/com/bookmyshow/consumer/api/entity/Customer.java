@@ -14,11 +14,14 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "userid", nullable = false)
-    private Long id;
+    private Long userId;
     private String username;
     private String password;
+    @Column(name = "firstname", nullable = false)
     private String firstName;
+    @Column(name = "lastname", nullable = false)
     private String lastName;
+    @Column(name = "enabled", nullable = false)
     private boolean isEnabled;
     private String email;
     private String mobile;
@@ -27,5 +30,4 @@ public class Customer {
     private LocalDateTime createdOn;
     @Column(name = "modified")
     private LocalDateTime lastModifiedOn;
-
 }

@@ -71,13 +71,15 @@ CREATE TABLE IF NOT EXISTS bms.bookings (
   bookingid INT NOT NULL AUTO_INCREMENT,
   showid INT NOT NULL REFERENCES bms.shows(showid) ON DELETE CASCADE,
   userid INT NOT NULL REFERENCES bms.users(userid) ON DELETE CASCADE,
-  seats INT NOT NULL,
   bookingdate TIMESTAMP NOT NULL,
   amount INT NOT NULL,
+  created TIMESTAMP NOT NULL,
+  modified TIMESTAMP NOT NULL,
   PRIMARY KEY (bookingid));
 
 CREATE TABLE IF NOT EXISTS bms.seatbookings (
   seatbookingid INT NOT NULL AUTO_INCREMENT,
+  bookingid INT NOT NULL REFERENCES bms.bookings(bookingid) ON DELETE CASCADE,
   showid INT NOT NULL REFERENCES bms.shows(showid) ON DELETE CASCADE,
   seatid VARCHAR(5) NOT NULL REFERENCES bms.theatreseats(seatid) ON DELETE CASCADE,
   PRIMARY KEY (seatbookingid));

@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "theatreseats")
+@Table(name = "theatreseats", schema = "bms")
 @Getter
 @Setter
 public class TheatreSeat {

@@ -14,6 +14,6 @@ public class ShowService {
     private ShowRepository showRepository;
 
     public List<Show> getShowsByMovieDateTime() {
-        return showRepository.getShowsByMovieDateTime();
+        return showRepository.findAll();
     }
 }

@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS bms.movies (
   description VARCHAR(400) NOT NULL,
   language VARCHAR(80) NOT NULL,
   director VARCHAR(80) NOT NULL,
-  castings VARCHAR(400) NOT NULL,
+  casting VARCHAR(400) NOT NULL,
   genre VARCHAR(45) NOT NULL,
   releasedate DATE NOT NULL,
   duration INT NOT NULL,

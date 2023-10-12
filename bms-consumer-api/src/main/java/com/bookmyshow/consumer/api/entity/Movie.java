@@ -30,7 +30,7 @@ public class Movie {
     @Column(name = "director", length = 80, nullable = false)
     private String director;
 
-    @Column(name = "cast", length = 400, nullable = false)
+    @Column(name = "casting", length = 400, nullable = false)
     private String cast;
 
     @Column(name = "genre", length = 45, nullable = false)

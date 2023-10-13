@@ -1,5 +1,6 @@
 package com.bookmyshow.consumer.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,14 +23,17 @@ public class Bookings {
     private Long bookingId;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "showid")
     private Show show;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "userid")
     private Customer user;
 
     @Transient
+    @JsonManagedReference
     @OneToMany(mappedBy = "bookings", cascade = CascadeType.ALL)
     private List<SeatBookings> seatBookings;
 
@@ -55,5 +59,17 @@ public class Bookings {
         this.modified = LocalDateTime.now();
     }
 
-
+    @Override
+    public String toString() {
+        return "Bookings{" +
+                "bookingId=" + bookingId +
+                ", show=" + show +
+                ", user=" + user +
+                ", seatBookings=" + seatBookings +
+                ", bookingDate=" + bookingDate +
+                ", amount=" + amount +
+                ", created=" + created +
+                ", modified=" + modified +
+                '}';
+    }
 }

@@ -1,5 +1,6 @@
 package com.bookmyshow.consumer.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,10 +21,12 @@ public class Show {
     private Long showId;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "theatreid")
     private Theatre theatre;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "movieid")
     private Movie movie;
 

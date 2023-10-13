@@ -16,7 +16,7 @@ public class BookingController {
 
     private final BookingService bookingService;
 
-    @Autowired(required = true)
+    @Autowired
     public BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
     }
